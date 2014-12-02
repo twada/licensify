@@ -10,7 +10,6 @@
  */
 'use strict';
 
-var fs = require('fs');
 var typeName = require('type-name');
 var through = require('through2');
 
