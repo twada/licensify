@@ -4,10 +4,6 @@
  *   license: MIT
  *   author: T. Jameson Little <t.jameson.little@gmail.com>
  * 
- * module: browserify
- *   license: MIT
- *   author: James Halliday <mail@substack.net>
- * 
  * module: buffer
  *   license: MIT
  *   author: Feross Aboukhadijeh <feross@feross.org>
