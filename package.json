@@ -1,0 +1,50 @@
+{
+  "name": "licensify",
+  "description": "Gather license information of bundled file",
+  "version": "0.0.1",
+  "author": {
+    "name": "Takuto Wada",
+    "email": "takuto.wada@gmail.com",
+    "url": "http://github.com/twada"
+  },
+  "bugs": "https://github.com/twada/licensify/issues",
+  "dependencies": {
+    "through2": "^0.6.3",
+    "type-name": "^1.0.0"
+  },
+  "devDependencies": {
+    "browserify": "^6.3.3",
+    "espower-loader": "^0.10.0",
+    "event-stream": "^3.1.7",
+    "intelli-espower-loader": "^0.5.0",
+    "mocha": "^2.0.1",
+    "power-assert": "^0.10.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "CHANGELOG.md",
+    "README.md",
+    "index.js",
+    "package.json",
+    "test"
+  ],
+  "homepage": "http://github.com/twada/licensify",
+  "keywords": [
+    "license",
+    "browserify-plugin"
+  ],
+  "license": {
+    "type": "MIT",
+    "url": "http://twada.mit-license.org/"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/twada/licensify.git"
+  },
+  "scripts": {
+    "test": "mocha --require intelli-espower-loader"
+  }
+}

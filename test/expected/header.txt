@@ -1,0 +1,75 @@
+/**
+ * 
+ * module: base64-js
+ *   license: MIT
+ *   author: T. Jameson Little <t.jameson.little@gmail.com>
+ * 
+ * module: browserify
+ *   license: MIT
+ *   author: James Halliday <mail@substack.net>
+ * 
+ * module: buffer
+ *   license: MIT
+ *   author: Feross Aboukhadijeh <feross@feross.org>
+ * 
+ * module: core-util-is
+ *   license: MIT
+ *   author: Isaac Z. Schlueter <i@izs.me>
+ * 
+ * module: events
+ *   license: NO LICENSE!
+ *   author: Irakli Gozalishvili <rfobic@gmail.com>
+ * 
+ * module: ieee754
+ *   license: MIT
+ *   author: Feross Aboukhadijeh <feross@feross.org>
+ * 
+ * module: inherits
+ *   license: ISC
+ *   author: NO AUTHOR!
+ * 
+ * module: is-array
+ *   license: MIT
+ *   author: NO AUTHOR!
+ * 
+ * module: isarray
+ *   license: MIT
+ *   author: Julian Gruber <mail@juliangruber.com>
+ * 
+ * module: licensify
+ *   license: MIT
+ *   author: Takuto Wada <takuto.wada@gmail.com>
+ * 
+ * module: process
+ *   license: NO LICENSE!
+ *   author: Roman Shtylman <shtylman@gmail.com>
+ * 
+ * module: readable-stream
+ *   license: MIT
+ *   author: Isaac Z. Schlueter <i@izs.me>
+ * 
+ * module: stream-browserify
+ *   license: MIT
+ *   author: James Halliday <mail@substack.net>
+ * 
+ * module: string_decoder
+ *   license: MIT
+ *   author: NO AUTHOR!
+ * 
+ * module: through2
+ *   license: MIT
+ *   author: Rod Vagg <r@va.gg>
+ * 
+ * module: type-name
+ *   license: MIT
+ *   author: Takuto Wada <takuto.wada@gmail.com>
+ * 
+ * module: util
+ *   license: MIT
+ *   author: Joyent <undefined>
+ * 
+ * module: xtend
+ *   license: MIT
+ *   author: Raynos <raynos2@gmail.com>
+ * 
+ */
