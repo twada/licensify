@@ -9,6 +9,12 @@ Browserify plugin to create license header for bundles
 [![License][license-image]][license-url]
 
 
+DESCRIPTION
+---------------------------------------
+
+`licensify` is a browserify plugin to create license header for bundles.
+
+
 HOW TO USE
 ---------------------------------------
 
