@@ -28,6 +28,7 @@
     "README.md",
     "index.js",
     "package.json",
+    "lib",
     "test"
   ],
   "homepage": "http://github.com/twada/licensify",
