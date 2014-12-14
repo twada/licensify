@@ -13,7 +13,7 @@
     "type-name": "^1.0.0"
   },
   "devDependencies": {
-    "browserify": "^6.3.3",
+    "browserify": "^7.0.1",
     "espower-loader": "^0.10.0",
     "event-stream": "^3.1.7",
     "intelli-espower-loader": "^0.5.0",
