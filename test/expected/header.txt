@@ -4,7 +4,6 @@
  * base64-js:
  *   license: MIT
  *   author: T. Jameson Little <t.jameson.little@gmail.com>
- *   maintainers: beatgammit <t.jameson.little@gmail.com>, feross <feross@feross.org>
  * 
  * buffer:
  *   license: MIT
@@ -18,12 +17,10 @@
  * 
  * events:
  *   author: Irakli Gozalishvili <rfobic@gmail.com>
- *   maintainers: gozala <rfobic@gmail.com>, shtylman <shtylman@gmail.com>
  * 
  * ieee754:
  *   license: MIT
  *   author: Feross Aboukhadijeh <feross@feross.org>
- *   maintainers: feross <feross@feross.org>
  *   contributors: Romain Beauxis <toots@rastageeks.org>
  * 
  * inherits:
@@ -31,7 +28,6 @@
  * 
  * is-array:
  *   license: MIT
- *   maintainers: retrofox <rdsuarez@gmail.com>
  * 
  * isarray:
  *   license: MIT
@@ -43,7 +39,6 @@
  * 
  * process:
  *   author: Roman Shtylman <shtylman@gmail.com>
- *   maintainers: coolaj86 <coolaj86@gmail.com>, shtylman <shtylman@gmail.com>
  * 
  * readable-stream:
  *   license: MIT
@@ -59,7 +54,6 @@
  * through2:
  *   license: MIT
  *   author: Rod Vagg <r@va.gg>
- *   maintainers: rvagg <rod@vagg.org>, bryce <bryce@ravenwall.com>
  * 
  * type-name:
  *   licenses: MIT
