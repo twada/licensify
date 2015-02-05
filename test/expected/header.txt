@@ -4,6 +4,7 @@
  * base64-js:
  *   license: MIT
  *   author: T. Jameson Little <t.jameson.little@gmail.com>
+ *   maintainers: beatgammit <t.jameson.little@gmail.com>, feross <feross@feross.org>
  * 
  * buffer:
  *   license: MIT
@@ -32,6 +33,7 @@
  * isarray:
  *   license: MIT
  *   author: Julian Gruber <mail@juliangruber.com>
+ *   maintainers: juliangruber <julian@juliangruber.com>
  * 
  * licensify:
  *   license: MIT
@@ -39,6 +41,7 @@
  * 
  * process:
  *   author: Roman Shtylman <shtylman@gmail.com>
+ *   maintainers: coolaj86 <coolaj86@gmail.com>, shtylman <shtylman@gmail.com>
  * 
  * readable-stream:
  *   license: MIT
@@ -56,9 +59,9 @@
  *   author: Rod Vagg <r@va.gg>
  * 
  * type-name:
- *   licenses: MIT
+ *   license: MIT
  *   author: Takuto Wada <takuto.wada@gmail.com>
- *   contributors: azu
+ *   contributors: azu, Yosuke Furukawa
  * 
  * util:
  *   license: MIT
