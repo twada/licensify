@@ -144,5 +144,5 @@ Licensed under the [MIT](http://twada.mit-license.org/) license.
 [depstat-url]: https://gemnasium.com/twada/licensify
 [depstat-image]: https://gemnasium.com/twada/licensify.svg
 
-[license-url]: http://twada.mit-license.org/
+[license-url]: http://twada.mit-license.org/2014-2015
 [license-image]: http://img.shields.io/badge/license-MIT-brightgreen.svg
