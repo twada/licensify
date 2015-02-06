@@ -2,7 +2,6 @@
 
 delete require.cache[require.resolve('../')];
 var licensify = require('../');
-var fs = require('fs');
 var path = require('path');
 var browserify = require('browserify');
 var through = require('through2');
@@ -26,9 +25,27 @@ var saveFirstChunk = function () {
 };
 
 describe('licensify', function () {
+    var expectedModules = [
+        'base64-js',
+        'buffer',
+        'core-util-is',
+        'events',
+        'ieee754',
+        'inherits',
+        'is-array',
+        'isarray',
+        'licensify',
+        'process',
+        'readable-stream',
+        'stream-browserify',
+        'string_decoder',
+        'through2',
+        'type-name',
+        'util',
+        'xtend'
+    ];
 
     it('creates license header', function (done) {
-        var expected = fs.readFileSync('test/expected/header.txt', 'utf8');
         var save = saveFirstChunk();
         var b = browserify();
         b.add(path.normalize(path.join(__dirname, '..', 'index.js')));
@@ -36,7 +53,10 @@ describe('licensify', function () {
         b.bundle().pipe(save).pipe(es.wait(function(err, data) {
             assert(!err);
             var actual = save.firstChunk;
-            assert(actual === expected);
+            expectedModules.forEach(function (moduleName) {
+                var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
+                assert(re.test(actual));
+            });
             done();
         }));
     });
