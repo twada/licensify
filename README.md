@@ -1,7 +1,7 @@
 licensify
 ================================
 
-Browserify plugin to create license header for bundles
+Browserify plugin to prepend license header to bundle
 
 [![Build Status][travis-image]][travis-url]
 [![NPM version][npm-image]][npm-url]
@@ -12,7 +12,7 @@ Browserify plugin to create license header for bundles
 DESCRIPTION
 ---------------------------------------
 
-`licensify` is a browserify plugin to create license header for bundles. Produces license header for bundle as follows.
+`licensify` is a browserify plugin to prepend license header to bundle as follows.
 
 ```javascript
 /**
@@ -107,6 +107,9 @@ $ browserify main.js -p licensify > build/bundle.js
 or programmatically
 
 ```javascript
+var browserify = require('browserify');
+var licensify = require('licensify');
+
 var b = browserify();
 b.add('/path/to/your/file');
 b.plugin(licensify);

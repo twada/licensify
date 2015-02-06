@@ -1,6 +1,6 @@
 /**
  * licensify:
- *   Browserify plugin to create license header for bundles
+ *   Browserify plugin to prepend license header to bundle
  * 
  * https://github.com/twada/licensify
  *

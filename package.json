@@ -1,6 +1,6 @@
 {
   "name": "licensify",
-  "description": "Browserify plugin to create license header for bundles",
+  "description": "Browserify plugin to prepend license header to bundle",
   "version": "0.2.0",
   "author": {
     "name": "Takuto Wada",
