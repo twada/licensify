@@ -45,20 +45,20 @@ describe('licensify', function () {
         'xtend'
     ];
 
-    it('creates license header', function (done) {
-        var save = saveFirstChunk();
-        var b = browserify();
-        b.add(path.normalize(path.join(__dirname, '..', 'index.js')));
-        b.plugin(licensify);
-        b.bundle().pipe(save).pipe(es.wait(function(err, data) {
-            assert(!err);
-            var actual = save.firstChunk;
-            expectedModules.forEach(function (moduleName) {
-                var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
+    expectedModules.forEach(function (moduleName) {
+        var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
+        it('ensure header includes [' + moduleName + ']', function (done) {
+            var save = saveFirstChunk();
+            var b = browserify();
+            b.add(path.normalize(path.join(__dirname, '..', 'index.js')));
+            b.plugin(licensify);
+            b.bundle().pipe(save).pipe(es.wait(function(err, data) {
+                assert(!err);
+                var actual = save.firstChunk;
                 assert(re.test(actual));
-            });
-            done();
-        }));
+                done();
+            }));
+        });
     });
 
 });
