@@ -12,14 +12,105 @@ Browserify plugin to create license header for bundles
 DESCRIPTION
 ---------------------------------------
 
-`licensify` is a browserify plugin to create license header for bundles.
+`licensify` is a browserify plugin to create license header for bundles. Produces license header for bundle as follows.
+
+```javascript
+/**
+ * Modules in this bundle
+ * 
+ * base64-js:
+ *   license: MIT
+ *   author: T. Jameson Little <t.jameson.little@gmail.com>
+ *   maintainers: beatgammit <t.jameson.little@gmail.com>, feross <feross@feross.org>
+ * 
+ * buffer:
+ *   license: MIT
+ *   author: Feross Aboukhadijeh <feross@feross.org>
+ *   maintainers: feross <feross@feross.org>
+ *   contributors: Romain Beauxis <toots@rastageeks.org>, James Halliday <mail@substack.net>
+ * 
+ * core-util-is:
+ *   license: MIT
+ *   author: Isaac Z. Schlueter <i@izs.me>
+ * 
+ * events:
+ *   author: Irakli Gozalishvili <rfobic@gmail.com>
+ * 
+ * ieee754:
+ *   license: MIT
+ *   author: Feross Aboukhadijeh <feross@feross.org>
+ *   contributors: Romain Beauxis <toots@rastageeks.org>
+ * 
+ * inherits:
+ *   license: ISC
+ * 
+ * is-array:
+ *   license: MIT
+ * 
+ * isarray:
+ *   license: MIT
+ *   author: Julian Gruber <mail@juliangruber.com>
+ *   maintainers: juliangruber <julian@juliangruber.com>
+ * 
+ * licensify:
+ *   license: MIT
+ *   author: Takuto Wada <takuto.wada@gmail.com>
+ * 
+ * process:
+ *   author: Roman Shtylman <shtylman@gmail.com>
+ *   maintainers: coolaj86 <coolaj86@gmail.com>, shtylman <shtylman@gmail.com>
+ * 
+ * readable-stream:
+ *   license: MIT
+ *   author: Isaac Z. Schlueter <i@izs.me>
+ * 
+ * stream-browserify:
+ *   license: MIT
+ *   author: James Halliday <mail@substack.net>
+ * 
+ * string_decoder:
+ *   license: MIT
+ * 
+ * through2:
+ *   license: MIT
+ *   author: Rod Vagg <r@va.gg>
+ * 
+ * type-name:
+ *   license: MIT
+ *   author: Takuto Wada <takuto.wada@gmail.com>
+ *   contributors: azu, Yosuke Furukawa
+ * 
+ * util:
+ *   license: MIT
+ *   author: Joyent
+ * 
+ * xtend:
+ *   licenses: MIT
+ *   author: Raynos <raynos2@gmail.com>
+ *   contributors: Jake Verbaten, Matt Esch
+ * 
+ */
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+...(your bundle continues ...)
+```
 
 
 HOW TO USE
 ---------------------------------------
 
+by command-line
+
 ```
 $ browserify main.js -p licensify > build/bundle.js 
+```
+
+or programmatically
+
+```javascript
+var b = browserify();
+b.add('/path/to/your/file');
+b.plugin(licensify);
+b.bundle().pipe(somewhere)
 ```
 
 
