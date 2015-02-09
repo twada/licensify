@@ -1,0 +1,17 @@
+{
+  "name": "licensify-test-scan-browser-fields",
+  "description": "",
+  "version": "0.0.1",
+  "author": {
+    "name": "Okuno Kentaro",
+    "email": "okunokentaro@me.com",
+    "url": "http://github.com/armorik83"
+  },
+  "browser": {
+    "jquery": "./node_modules/jquery/dummy.js",
+    "angular": "./node_modules/angular/dummy.js"
+  },
+  "license": {
+    "type": "MIT"
+  }
+}
