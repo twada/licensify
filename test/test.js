@@ -62,3 +62,50 @@ describe('licensify', function () {
     });
 
 });
+
+describe('licensify scan browser fields', function () {
+    describe('true scanBrowser', function () {
+        var expectedModules = [
+            'licensify-test-scan-browser-fields',
+            'jquery',
+            'angular'
+        ];
+        expectedModules.forEach(function (moduleName) {
+            var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
+            it('ensure header includes [' + moduleName + ']', function (done) {
+                var save = saveFirstChunk();
+                var b = browserify();
+                b.add(path.normalize(path.join(__dirname, 'test-scan-browser-fields', 'index.js')));
+                b.plugin(licensify, {scanBrowser: true}); // with option
+                b.bundle().pipe(save).pipe(es.wait(function(err, data) {
+                    assert(!err);
+                    var actual = save.firstChunk;
+                    assert(re.test(actual));
+                    done();
+                }));
+            });
+        });
+    });
+
+    describe('false scanBrowser as a default', function () {
+        var expectedNotIncludedModules = [
+            'jquery',
+            'angular'
+        ];
+        expectedNotIncludedModules.forEach(function (moduleName) {
+            var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
+            it('ensure header NOT includes [' + moduleName + ']', function (done) {
+                var save = saveFirstChunk();
+                var b = browserify();
+                b.add(path.normalize(path.join(__dirname, 'test-scan-browser-fields', 'index.js')));
+                b.plugin(licensify); // default
+                b.bundle().pipe(save).pipe(es.wait(function(err, data) {
+                    assert(!err);
+                    var actual = save.firstChunk;
+                    assert(!re.test(actual));
+                    done();
+                }));
+            });
+        });
+    });
+});
