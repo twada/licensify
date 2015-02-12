@@ -8,6 +8,12 @@
     "url": "http://github.com/twada"
   },
   "bugs": "https://github.com/twada/licensify/issues",
+  "contributors": [
+    {
+      "name": "Okuno Kentaro",
+      "url": "http://github.com/armorik83"
+    }
+  ],
   "dependencies": {
     "through2": "^1.1.1",
     "type-name": "^1.0.0"
