@@ -1,4 +1,4 @@
-## [1.0.0](https://github.com/twada/licensify/releases/tag/1.0.0) (2015-02-06)
+## [1.0.0](https://github.com/twada/licensify/releases/tag/v1.0.0) (2015-02-06)
 
 
 switch to semver
