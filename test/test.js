@@ -63,8 +63,9 @@ describe('licensify', function () {
 
 });
 
-describe('licensify scan browser fields', function () {
-    describe('true scanBrowser', function () {
+
+describe('scanBrowser option to scan browser fields in package.json:', function () {
+    describe('when truthy', function () {
         var expectedModules = [
             'licensify-test-scan-browser-fields',
             'jquery',
@@ -86,15 +87,14 @@ describe('licensify scan browser fields', function () {
             });
         });
     });
-
-    describe('false scanBrowser as a default', function () {
+    describe('default is false', function () {
         var expectedNotIncludedModules = [
             'jquery',
             'angular'
         ];
         expectedNotIncludedModules.forEach(function (moduleName) {
             var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
-            it('ensure header NOT includes [' + moduleName + ']', function (done) {
+            it('ensure header does NOT include [' + moduleName + ']', function (done) {
                 var save = saveFirstChunk();
                 var b = browserify();
                 b.add(path.normalize(path.join(__dirname, 'test-scan-browser-fields', 'index.js')));
