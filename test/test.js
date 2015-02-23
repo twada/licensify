@@ -25,6 +25,20 @@ var saveFirstChunk = function () {
 };
 
 describe('licensify', function () {
+    var header;
+
+    before(function (done) {
+        var save = saveFirstChunk();
+        var b = browserify();
+        b.add(path.normalize(path.join(__dirname, '..', 'index.js')));
+        b.plugin(licensify);
+        b.bundle().pipe(save).pipe(es.wait(function(err, data) {
+            assert(!err);
+            header = save.firstChunk;
+            done();
+        }));
+    });
+
     var expectedModules = [
         'base64-js',
         'buffer',
@@ -44,28 +58,32 @@ describe('licensify', function () {
         'util',
         'xtend'
     ];
-
     expectedModules.forEach(function (moduleName) {
         var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
-        it('ensure header includes [' + moduleName + ']', function (done) {
-            var save = saveFirstChunk();
-            var b = browserify();
-            b.add(path.normalize(path.join(__dirname, '..', 'index.js')));
-            b.plugin(licensify);
-            b.bundle().pipe(save).pipe(es.wait(function(err, data) {
-                assert(!err);
-                var actual = save.firstChunk;
-                assert(re.test(actual));
-                done();
-            }));
+        it('ensure header includes [' + moduleName + ']', function () {
+            assert(re.test(header));
         });
     });
-
 });
 
 
-describe('scanBrowser option to scan browser fields in package.json:', function () {
+describe('`scanBrowser` option to scan `browser` fields in package.json:', function () {
+
     describe('when truthy', function () {
+        var header;
+
+        before(function (done) {
+            var save = saveFirstChunk();
+            var b = browserify();
+            b.add(path.normalize(path.join(__dirname, 'test-scan-browser-fields', 'index.js')));
+            b.plugin(licensify, {scanBrowser: true}); // with option
+            b.bundle().pipe(save).pipe(es.wait(function(err, data) {
+                assert(!err);
+                header = save.firstChunk;
+                done();
+            }));
+        });
+
         var expectedModules = [
             'licensify-test-scan-browser-fields',
             'jquery',
@@ -73,38 +91,35 @@ describe('scanBrowser option to scan browser fields in package.json:', function 
         ];
         expectedModules.forEach(function (moduleName) {
             var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
-            it('ensure header includes [' + moduleName + ']', function (done) {
-                var save = saveFirstChunk();
-                var b = browserify();
-                b.add(path.normalize(path.join(__dirname, 'test-scan-browser-fields', 'index.js')));
-                b.plugin(licensify, {scanBrowser: true}); // with option
-                b.bundle().pipe(save).pipe(es.wait(function(err, data) {
-                    assert(!err);
-                    var actual = save.firstChunk;
-                    assert(re.test(actual));
-                    done();
-                }));
+            it('ensure header includes [' + moduleName + ']', function () {
+                assert(re.test(header));
             });
         });
     });
+
     describe('default is false', function () {
-        var expectedNotIncludedModules = [
+        var header;
+
+        before(function (done) {
+            var save = saveFirstChunk();
+            var b = browserify();
+            b.add(path.normalize(path.join(__dirname, 'test-scan-browser-fields', 'index.js')));
+            b.plugin(licensify); // default
+            b.bundle().pipe(save).pipe(es.wait(function(err, data) {
+                assert(!err);
+                header = save.firstChunk;
+                done();
+            }));
+        });
+
+        var notToBeIncludedModules = [
             'jquery',
             'angular'
         ];
-        expectedNotIncludedModules.forEach(function (moduleName) {
+        notToBeIncludedModules.forEach(function (moduleName) {
             var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
-            it('ensure header does NOT include [' + moduleName + ']', function (done) {
-                var save = saveFirstChunk();
-                var b = browserify();
-                b.add(path.normalize(path.join(__dirname, 'test-scan-browser-fields', 'index.js')));
-                b.plugin(licensify); // default
-                b.bundle().pipe(save).pipe(es.wait(function(err, data) {
-                    assert(!err);
-                    var actual = save.firstChunk;
-                    assert(!re.test(actual));
-                    done();
-                }));
+            it('ensure header does NOT include [' + moduleName + ']', function () {
+                assert(!re.test(header));
             });
         });
     });
