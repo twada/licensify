@@ -178,6 +178,7 @@ AUTHOR
 CONTRIBUTORS
 ---------------------------------------
 * [Okuno Kentaro](http://github.com/armorik83)
+* [Ayumu Sato](https://github.com/ahomu)
 
 
 LICENSE
