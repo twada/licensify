@@ -3,7 +3,7 @@
 
 #### Features
 
-* [add version field](https://github.com/twada/licensify/pull/3) by @ahomu
+* [add version field](https://github.com/twada/licensify/pull/3) (by [@ahomu](https://github.com/ahomu))
 
 
 ## [1.1.0](https://github.com/twada/licensify/releases/tag/v1.1.0) (2015-04-05)
@@ -16,7 +16,7 @@
 
 #### Features
 
-* [scanBrowser option](https://github.com/twada/licensify/pull/1) to scan `browser` field (by @armorik83)
+* [scanBrowser option](https://github.com/twada/licensify/pull/1) to scan `browser` field (by [@armorik83](http://github.com/armorik83))
 
 
 ## [1.0.0](https://github.com/twada/licensify/releases/tag/v1.0.0) (2015-02-06)
