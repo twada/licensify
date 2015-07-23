@@ -29,7 +29,7 @@ DESCRIPTION
  *   author: Feross Aboukhadijeh <feross@feross.org>
  *   maintainers: feross <feross@feross.org>
  *   contributors: Romain Beauxis <toots@rastageeks.org>, James Halliday <mail@substack.net>
- *   version: 3.1.2
+ *   version: 3.3.1
  * 
  * core-util-is:
  *   license: MIT
@@ -46,7 +46,7 @@ DESCRIPTION
  *   author: Feross Aboukhadijeh <feross@feross.org>
  *   maintainers: feross <feross@feross.org>
  *   contributors: Romain Beauxis <toots@rastageeks.org>
- *   version: 1.1.4
+ *   version: 1.1.6
  * 
  * inherits:
  *   license: ISC
@@ -60,29 +60,29 @@ DESCRIPTION
  * isarray:
  *   license: MIT
  *   author: Julian Gruber <mail@juliangruber.com>
+ *   maintainers: juliangruber <julian@juliangruber.com>
  *   version: 0.0.1
  * 
  * licensify:
  *   license: MIT
  *   author: Takuto Wada <takuto.wada@gmail.com>
- *   contributors: Okuno Kentaro
+ *   contributors: Okuno Kentaro, Ayumu Sato
  *   version: 1.1.0
  * 
  * process:
  *   author: Roman Shtylman <shtylman@gmail.com>
- *   maintainers: coolaj86 <coolaj86@gmail.com>, shtylman <shtylman@gmail.com>
- *   version: 0.10.1
+ *   maintainers: coolaj86 <coolaj86@gmail.com>, defunctzombie <shtylman@gmail.com>
+ *   version: 0.11.1
+ * 
+ * process-nextick-args:
+ *   license: MIT
+ *   maintainers: cwmma <calvin.metcalf@gmail.com>
+ *   version: 1.0.2
  * 
  * readable-stream:
  *   license: MIT
- *   author: Isaac Z. Schlueter <i@izs.me>
- *   version: 1.1.13
- * 
- * stream-browserify:
- *   license: MIT
- *   author: James Halliday <mail@substack.net>
- *   maintainers: substack <mail@substack.net>
- *   version: 1.0.0
+ *   maintainers: isaacs <isaacs@npmjs.com>, tootallnate <nathan@tootallnate.net>, rvagg <rod@vagg.org>, cwmma <calvin.metcalf@gmail.com>
+ *   version: 2.0.2
  * 
  * string_decoder:
  *   license: MIT
@@ -91,7 +91,8 @@ DESCRIPTION
  * through2:
  *   license: MIT
  *   author: Rod Vagg <r@va.gg>
- *   version: 1.1.1
+ *   maintainers: rvagg <rod@vagg.org>, bryce <bryce@ravenwall.com>
+ *   version: 2.0.0
  * 
  * type-name:
  *   license: MIT
@@ -105,6 +106,12 @@ DESCRIPTION
  *   author: Joyent
  *   maintainers: shtylman <shtylman@gmail.com>
  *   version: 0.10.3
+ * 
+ * util-deprecate:
+ *   license: MIT
+ *   author: Nathan Rajlich <nathan@tootallnate.net>
+ *   maintainers: tootallnate <nathan@tootallnate.net>
+ *   version: 1.0.1
  * 
  * xtend:
  *   licenses: MIT
