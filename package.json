@@ -46,10 +46,7 @@
     "license",
     "browserify-plugin"
   ],
-  "license": {
-    "type": "MIT",
-    "url": "http://twada.mit-license.org/2014-2015"
-  },
+  "license": "MIT",
   "main": "index.js",
   "repository": {
     "type": "git",
