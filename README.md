@@ -22,72 +22,95 @@ DESCRIPTION
  *   license: MIT
  *   author: T. Jameson Little <t.jameson.little@gmail.com>
  *   maintainers: beatgammit <t.jameson.little@gmail.com>, feross <feross@feross.org>
+ *   version: 0.0.8
  * 
  * buffer:
  *   license: MIT
  *   author: Feross Aboukhadijeh <feross@feross.org>
  *   maintainers: feross <feross@feross.org>
  *   contributors: Romain Beauxis <toots@rastageeks.org>, James Halliday <mail@substack.net>
+ *   version: 3.1.2
  * 
  * core-util-is:
  *   license: MIT
  *   author: Isaac Z. Schlueter <i@izs.me>
+ *   version: 1.0.1
  * 
  * events:
  *   author: Irakli Gozalishvili <rfobic@gmail.com>
+ *   maintainers: gozala <rfobic@gmail.com>, shtylman <shtylman@gmail.com>
+ *   version: 1.0.2
  * 
  * ieee754:
  *   license: MIT
  *   author: Feross Aboukhadijeh <feross@feross.org>
+ *   maintainers: feross <feross@feross.org>
  *   contributors: Romain Beauxis <toots@rastageeks.org>
+ *   version: 1.1.4
  * 
  * inherits:
  *   license: ISC
+ *   version: 2.0.1
  * 
  * is-array:
  *   license: MIT
+ *   maintainers: retrofox <rdsuarez@gmail.com>
+ *   version: 1.0.1
  * 
  * isarray:
  *   license: MIT
  *   author: Julian Gruber <mail@juliangruber.com>
- *   maintainers: juliangruber <julian@juliangruber.com>
+ *   version: 0.0.1
  * 
  * licensify:
  *   license: MIT
  *   author: Takuto Wada <takuto.wada@gmail.com>
+ *   contributors: Okuno Kentaro
+ *   version: 1.1.0
  * 
  * process:
  *   author: Roman Shtylman <shtylman@gmail.com>
  *   maintainers: coolaj86 <coolaj86@gmail.com>, shtylman <shtylman@gmail.com>
+ *   version: 0.10.1
  * 
  * readable-stream:
  *   license: MIT
  *   author: Isaac Z. Schlueter <i@izs.me>
+ *   version: 1.1.13
  * 
  * stream-browserify:
  *   license: MIT
  *   author: James Halliday <mail@substack.net>
+ *   maintainers: substack <mail@substack.net>
+ *   version: 1.0.0
  * 
  * string_decoder:
  *   license: MIT
+ *   version: 0.10.31
  * 
  * through2:
  *   license: MIT
  *   author: Rod Vagg <r@va.gg>
+ *   version: 1.1.1
  * 
  * type-name:
  *   license: MIT
  *   author: Takuto Wada <takuto.wada@gmail.com>
+ *   maintainers: twada <takuto.wada@gmail.com>
  *   contributors: azu, Yosuke Furukawa
+ *   version: 1.0.1
  * 
  * util:
  *   license: MIT
  *   author: Joyent
+ *   maintainers: shtylman <shtylman@gmail.com>
+ *   version: 0.10.3
  * 
  * xtend:
  *   licenses: MIT
  *   author: Raynos <raynos2@gmail.com>
  *   contributors: Jake Verbaten, Matt Esch
+ *   version: 4.0.0
  * 
  */
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
@@ -109,11 +132,13 @@ or programmatically
 ```javascript
 var browserify = require('browserify');
 var licensify = require('licensify');
+var fs = require('fs');
+var dest = fs.createWriteStream('/path/to/bundle.js);
 
 var b = browserify();
 b.add('/path/to/your/file');
 b.plugin(licensify);
-b.bundle().pipe(somewhere)
+b.bundle().pipe(dest)
 ```
 
 
@@ -133,7 +158,7 @@ or programmatically
 var b = browserify();
 b.add('/path/to/your/file');
 b.plugin(licensify, {scanBrowser: true});
-b.bundle().pipe(somewhere)
+b.bundle().pipe(dest)
 ```
 
 
