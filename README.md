@@ -140,7 +140,7 @@ or programmatically
 var browserify = require('browserify');
 var licensify = require('licensify');
 var fs = require('fs');
-var dest = fs.createWriteStream('/path/to/bundle.js);
+var dest = fs.createWriteStream('/path/to/bundle.js');
 
 var b = browserify();
 b.add('/path/to/your/file');
