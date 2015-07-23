@@ -50,12 +50,13 @@ describe('licensify', function () {
         'isarray',
         'licensify',
         'process',
+        'process-nextick-args',
         'readable-stream',
-        'stream-browserify',
         'string_decoder',
         'through2',
         'type-name',
         'util',
+        'util-deprecate',
         'xtend'
     ];
     expectedModules.forEach(function (moduleName) {
