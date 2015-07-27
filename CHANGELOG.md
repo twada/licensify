@@ -1,3 +1,11 @@
+## [1.3.0](https://github.com/twada/licensify/releases/tag/v1.3.0) (2015-07-27)
+
+
+#### Features
+
+* move main module to the top ([d44c5e8d](https://github.com/twada/licensify/commit/d44c5e8d48d17481c6e7cc9220ddaa2c84e77339))
+
+
 ## [1.2.0](https://github.com/twada/licensify/releases/tag/v1.2.0) (2015-07-23)
 
 
