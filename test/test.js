@@ -40,6 +40,7 @@ describe('licensify', function () {
     });
 
     var expectedModules = [
+        'licensify',
         'base64-js',
         'buffer',
         'core-util-is',
@@ -48,7 +49,6 @@ describe('licensify', function () {
         'inherits',
         'is-array',
         'isarray',
-        'licensify',
         'process',
         'process-nextick-args',
         'readable-stream',
@@ -111,6 +111,16 @@ describe('`scanBrowser` option to scan `browser` fields in package.json:', funct
                 header = save.firstChunk;
                 done();
             }));
+        });
+
+        var expectedModules = [
+            'licensify-test-scan-browser-fields'
+        ];
+        expectedModules.forEach(function (moduleName) {
+            var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
+            it('ensure header includes [' + moduleName + ']', function () {
+                assert(re.test(header));
+            });
         });
 
         var notToBeIncludedModules = [

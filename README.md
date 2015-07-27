@@ -18,6 +18,12 @@ DESCRIPTION
 /**
  * Modules in this bundle
  * 
+ * licensify:
+ *   license: MIT
+ *   author: Takuto Wada <takuto.wada@gmail.com>
+ *   contributors: Okuno Kentaro, Ayumu Sato
+ *   version: 1.3.0
+ * 
  * base64-js:
  *   license: MIT
  *   author: T. Jameson Little <t.jameson.little@gmail.com>
@@ -62,12 +68,6 @@ DESCRIPTION
  *   author: Julian Gruber <mail@juliangruber.com>
  *   maintainers: juliangruber <julian@juliangruber.com>
  *   version: 0.0.1
- * 
- * licensify:
- *   license: MIT
- *   author: Takuto Wada <takuto.wada@gmail.com>
- *   contributors: Okuno Kentaro, Ayumu Sato
- *   version: 1.1.0
  * 
  * process:
  *   author: Roman Shtylman <shtylman@gmail.com>
