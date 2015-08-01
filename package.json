@@ -5,13 +5,13 @@
   "author": {
     "name": "Takuto Wada",
     "email": "takuto.wada@gmail.com",
-    "url": "http://github.com/twada"
+    "url": "https://github.com/twada"
   },
   "bugs": "https://github.com/twada/licensify/issues",
   "contributors": [
     {
       "name": "Okuno Kentaro",
-      "url": "http://github.com/armorik83"
+      "url": "https://github.com/armorik83"
     },
     {
       "name": "Ayumu Sato",
@@ -41,7 +41,7 @@
     "lib",
     "test"
   ],
-  "homepage": "http://github.com/twada/licensify",
+  "homepage": "https://github.com/twada/licensify",
   "keywords": [
     "license",
     "browserify-plugin"
@@ -50,7 +50,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/twada/licensify.git"
+    "url": "https://github.com/twada/licensify.git"
   },
   "scripts": {
     "test": "mocha --require intelli-espower-loader"
