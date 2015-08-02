@@ -22,12 +22,14 @@ DESCRIPTION
  *   license: MIT
  *   author: Takuto Wada <takuto.wada@gmail.com>
  *   contributors: Okuno Kentaro, Ayumu Sato
+ *   homepage: https://github.com/twada/licensify
  *   version: 1.3.0
  * 
  * base64-js:
  *   license: MIT
  *   author: T. Jameson Little <t.jameson.little@gmail.com>
  *   maintainers: beatgammit <t.jameson.little@gmail.com>, feross <feross@feross.org>
+ *   homepage: https://github.com/beatgammit/base64-js
  *   version: 0.0.8
  * 
  * buffer:
@@ -35,16 +37,19 @@ DESCRIPTION
  *   author: Feross Aboukhadijeh <feross@feross.org>
  *   maintainers: feross <feross@feross.org>
  *   contributors: Romain Beauxis <toots@rastageeks.org>, James Halliday <mail@substack.net>
+ *   homepage: https://github.com/feross/buffer
  *   version: 3.3.1
  * 
  * core-util-is:
  *   license: MIT
  *   author: Isaac Z. Schlueter <i@izs.me>
+ *   homepage: https://github.com/isaacs/core-util-is
  *   version: 1.0.1
  * 
  * events:
  *   author: Irakli Gozalishvili <rfobic@gmail.com>
  *   maintainers: gozala <rfobic@gmail.com>, shtylman <shtylman@gmail.com>
+ *   homepage: https://github.com/Gozala/events
  *   version: 1.0.2
  * 
  * ieee754:
@@ -52,46 +57,55 @@ DESCRIPTION
  *   author: Feross Aboukhadijeh <feross@feross.org>
  *   maintainers: feross <feross@feross.org>
  *   contributors: Romain Beauxis <toots@rastageeks.org>
+ *   homepage: https://github.com/feross/ieee754#readme
  *   version: 1.1.6
  * 
  * inherits:
  *   license: ISC
+ *   homepage: https://github.com/isaacs/inherits
  *   version: 2.0.1
  * 
  * is-array:
  *   license: MIT
  *   maintainers: retrofox <rdsuarez@gmail.com>
+ *   homepage: https://github.com/retrofox/is-array
  *   version: 1.0.1
  * 
  * isarray:
  *   license: MIT
  *   author: Julian Gruber <mail@juliangruber.com>
  *   maintainers: juliangruber <julian@juliangruber.com>
+ *   homepage: https://github.com/juliangruber/isarray
  *   version: 0.0.1
  * 
  * process:
  *   author: Roman Shtylman <shtylman@gmail.com>
  *   maintainers: coolaj86 <coolaj86@gmail.com>, defunctzombie <shtylman@gmail.com>
+ *   homepage: https://github.com/shtylman/node-process#readme
  *   version: 0.11.1
  * 
  * process-nextick-args:
  *   license: MIT
  *   maintainers: cwmma <calvin.metcalf@gmail.com>
+ *   homepage: https://github.com/calvinmetcalf/process-nextick-args
  *   version: 1.0.2
  * 
  * readable-stream:
  *   license: MIT
  *   maintainers: isaacs <isaacs@npmjs.com>, tootallnate <nathan@tootallnate.net>, rvagg <rod@vagg.org>, cwmma <calvin.metcalf@gmail.com>
+ *   homepage: https://github.com/nodejs/readable-stream#readme
  *   version: 2.0.2
  * 
  * string_decoder:
  *   license: MIT
+ *   homepage: https://github.com/rvagg/string_decoder
  *   version: 0.10.31
  * 
  * through2:
  *   license: MIT
  *   author: Rod Vagg <r@va.gg>
  *   maintainers: rvagg <rod@vagg.org>, bryce <bryce@ravenwall.com>
+ *   homepage: https://github.com/rvagg/through2#readme
  *   version: 2.0.0
  * 
  * type-name:
@@ -99,24 +113,28 @@ DESCRIPTION
  *   author: Takuto Wada <takuto.wada@gmail.com>
  *   maintainers: twada <takuto.wada@gmail.com>
  *   contributors: azu, Yosuke Furukawa
+ *   homepage: https://github.com/twada/type-name
  *   version: 1.0.1
  * 
  * util:
  *   license: MIT
  *   author: Joyent
  *   maintainers: shtylman <shtylman@gmail.com>
+ *   homepage: https://github.com/defunctzombie/node-util
  *   version: 0.10.3
  * 
  * util-deprecate:
  *   license: MIT
  *   author: Nathan Rajlich <nathan@tootallnate.net>
  *   maintainers: tootallnate <nathan@tootallnate.net>
+ *   homepage: https://github.com/TooTallNate/util-deprecate
  *   version: 1.0.1
  * 
  * xtend:
  *   licenses: MIT
  *   author: Raynos <raynos2@gmail.com>
  *   contributors: Jake Verbaten, Matt Esch
+ *   homepage: https://github.com/Raynos/xtend
  *   version: 4.0.0
  * 
  */
