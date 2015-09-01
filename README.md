@@ -17,13 +17,14 @@ DESCRIPTION
 ```javascript
 /**
  * Modules in this bundle
+ * @license
  * 
  * licensify:
  *   license: MIT
  *   author: Takuto Wada <takuto.wada@gmail.com>
- *   contributors: Okuno Kentaro, Ayumu Sato
+ *   contributors: Okuno Kentaro, Ayumu Sato, Denis Sokolov
  *   homepage: https://github.com/twada/licensify
- *   version: 1.4.0
+ *   version: 1.5.0
  * 
  * base64-js:
  *   license: MIT
@@ -38,7 +39,7 @@ DESCRIPTION
  *   maintainers: feross <feross@feross.org>
  *   contributors: Romain Beauxis <toots@rastageeks.org>, James Halliday <mail@substack.net>
  *   homepage: https://github.com/feross/buffer
- *   version: 3.3.1
+ *   version: 3.4.3
  * 
  * core-util-is:
  *   license: MIT
