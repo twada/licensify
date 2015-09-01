@@ -39,6 +39,10 @@ describe('licensify', function () {
         }));
     });
 
+    it('ensure header includes @license tag', function (){
+        assert(/@license/.test(header));
+    });
+
     var expectedModules = [
         'licensify',
         'base64-js',
