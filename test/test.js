@@ -40,7 +40,8 @@ describe('licensify', function () {
     });
 
     it('ensure header includes @license tag', function (){
-        assert(/@license/.test(header));
+        var re = new RegExp(' \* @license$', 'gm');
+        assert(re.test(header));
     });
 
     var expectedModules = [
