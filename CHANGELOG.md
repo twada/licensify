@@ -1,3 +1,11 @@
+## [1.5.0](https://github.com/twada/licensify/releases/tag/v1.5.0) (2015-09-01)
+
+
+#### Features
+
+* [Add @license tag to the header](https://github.com/twada/licensify/pull/6) (by [@denis-sokolov](https://github.com/denis-sokolov))
+
+
 ## [1.4.0](https://github.com/twada/licensify/releases/tag/v1.4.0) (2015-08-03)
 
 
