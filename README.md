@@ -168,25 +168,9 @@ b.plugin(licensify);
 b.bundle().pipe(dest)
 ```
 
+### browser field
 
-#### scanBrowser option
-
-if `scanBrowser` option is truthy, licensify scans and traverses [`browser` field](https://github.com/substack/browserify-handbook#browser-field) too.
-
-by command-line
-
-```
-$ browserify main.js -p [ licensify --scanBrowser ] > build/bundle.js 
-```
-
-or programmatically
-
-```javascript
-var b = browserify();
-b.add('/path/to/your/file');
-b.plugin(licensify, {scanBrowser: true});
-b.bundle().pipe(dest)
-```
+Since 2.0.0, licensify scans and traverses [`browser` field](https://github.com/substack/browserify-handbook#browser-field) if exists.
 
 
 INSTALL
