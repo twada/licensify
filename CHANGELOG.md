@@ -1,3 +1,18 @@
+## [2.0.0](https://github.com/twada/licensify/releases/tag/v2.0.0) (2015-09-07)
+
+
+#### Features
+
+* always scan browser field ([6728e47c](https://github.com/twada/licensify/commit/6728e47cf4bd3f36f005f589e3a8e7733d007140), closes [#5](https://github.com/twada/licensify/issues/5))
+
+
+#### Breaking Changes
+
+* `scanBrowser` option is ignored since this release and treated as `scanBrowser=true` at all times.
+
+ ([6728e47c](https://github.com/twada/licensify/commit/6728e47cf4bd3f36f005f589e3a8e7733d007140))
+
+
 ## [1.5.0](https://github.com/twada/licensify/releases/tag/v1.5.0) (2015-09-01)
 
 
