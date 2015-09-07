@@ -24,7 +24,7 @@ DESCRIPTION
  *   author: Takuto Wada <takuto.wada@gmail.com>
  *   contributors: Okuno Kentaro, Ayumu Sato, Denis Sokolov
  *   homepage: https://github.com/twada/licensify
- *   version: 1.5.0
+ *   version: 2.0.0
  * 
  * base64-js:
  *   license: MIT
