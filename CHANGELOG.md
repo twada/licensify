@@ -1,3 +1,9 @@
+### [2.0.1](https://github.com/twada/licensify/releases/tag/v2.0.1) (2015-09-13)
+
+
+* add Node 4.0.0 to CI ([bebe1b8](https://github.com/twada/licensify/commit/bebe1b8cf3e7d4c0f147e711031da7ea50cb9fe6))
+
+
 ## [2.0.0](https://github.com/twada/licensify/releases/tag/v2.0.0) (2015-09-07)
 
 
