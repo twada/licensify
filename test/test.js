@@ -78,7 +78,7 @@ describe('licensify', function () {
         'homepage: https://github.com/isaacs/core-util-is#readme',
         'homepage: https://github.com/Gozala/events',
         'homepage: https://github.com/feross/ieee754#readme',
-        'homepage: https://github.com/isaacs/inherits#readme',
+        'homepage: https://github.com/isaacs/inherits',
         'homepage: https://github.com/retrofox/is-array',
         'homepage: https://github.com/juliangruber/isarray',
         'homepage: https://github.com/shtylman/node-process#readme',
