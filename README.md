@@ -82,7 +82,7 @@ DESCRIPTION
  * process:
  *   author: Roman Shtylman <shtylman@gmail.com>
  *   maintainers: coolaj86 <coolaj86@gmail.com>, defunctzombie <shtylman@gmail.com>
- *   homepage: https://github.com/shtylman/node-process#readme
+ *   homepage: https://github.com/defunctzombie/node-process#readme
  *   version: 0.11.1
  * 
  * process-nextick-args:
@@ -183,12 +183,12 @@ $ npm install --save-dev licensify
 
 AUTHOR
 ---------------------------------------
-* [Takuto Wada](http://github.com/twada)
+* [Takuto Wada](https://github.com/twada)
 
 
 CONTRIBUTORS
 ---------------------------------------
-* [Okuno Kentaro](http://github.com/armorik83)
+* [Okuno Kentaro](https://github.com/armorik83)
 * [Ayumu Sato](https://github.com/ahomu)
 * [Denis Sokolov](https://github.com/denis-sokolov)
 
@@ -198,14 +198,14 @@ LICENSE
 Licensed under the [MIT](http://twada.mit-license.org/) license.
 
 
-[npm-url]: https://npmjs.org/package/licensify
+[npm-url]: https://www.npmjs.com/package/licensify
 [npm-image]: https://badge.fury.io/js/licensify.svg
 
-[travis-url]: http://travis-ci.org/twada/licensify
+[travis-url]: https://travis-ci.org/twada/licensify
 [travis-image]: https://secure.travis-ci.org/twada/licensify.svg?branch=master
 
 [depstat-url]: https://gemnasium.com/twada/licensify
 [depstat-image]: https://gemnasium.com/twada/licensify.svg
 
 [license-url]: http://twada.mit-license.org/2014-2015
-[license-image]: http://img.shields.io/badge/license-MIT-brightgreen.svg
+[license-image]: https://img.shields.io/badge/license-MIT-brightgreen.svg
