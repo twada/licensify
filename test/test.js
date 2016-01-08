@@ -6,6 +6,8 @@ var path = require('path');
 var browserify = require('browserify');
 var through = require('through2');
 var es = require('event-stream');
+var convert = require('convert-source-map');
+var SourceMapConsumer = require('source-map').SourceMapConsumer;
 var assert = require('power-assert').customize({
     output: {
         lineDiffThreshold: 1
@@ -24,26 +26,13 @@ var saveFirstChunk = function () {
     });
 };
 
+function newlinesIn (src) {
+    if (!src) return 0;
+    var newlines = src.match(/\n/g);
+    return newlines ? newlines.length : 0;
+}
+
 describe('licensify', function () {
-    var header;
-
-    before(function (done) {
-        var save = saveFirstChunk();
-        var b = browserify();
-        b.add(path.normalize(path.join(__dirname, '..', 'index.js')));
-        b.plugin(licensify);
-        b.bundle().pipe(save).pipe(es.wait(function(err, data) {
-            assert(!err);
-            header = save.firstChunk;
-            done();
-        }));
-    });
-
-    it('ensure header includes @license tag', function (){
-        var re = new RegExp(' \* @license$', 'gm');
-        assert(re.test(header));
-    });
-
     var expectedModules = [
         'licensify',
         'base64-js',
@@ -63,13 +52,6 @@ describe('licensify', function () {
         'util-deprecate',
         'xtend'
     ];
-    expectedModules.forEach(function (moduleName) {
-        var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
-        it('ensure header includes [' + moduleName + ']', function () {
-            assert(re.test(header));
-        });
-    });
-
     var expectedUrls = [
         'homepage: https://github.com/twada/licensify',
         'homepage: https://github.com/beatgammit/base64-js',
@@ -88,12 +70,53 @@ describe('licensify', function () {
         'homepage: https://github.com/TooTallNate/util-deprecate',
         'homepage: https://github.com/Raynos/xtend'
     ];
-    expectedUrls.forEach(function (url) {
-        var re = new RegExp(' \* ' + url + '$', 'gm');
-        it('ensure header includes [' + url + ']', function () {
-            assert(re.test(header));
+
+    function licensifyTest (opts) {
+        describe('debug: ' + opts.debug, function () {
+            var header;
+            before(function (done) {
+                var save = saveFirstChunk();
+                var b = browserify([], opts);
+                b.add(path.normalize(path.join(__dirname, '..', 'index.js')));
+                b.plugin(licensify);
+                b.bundle().pipe(save).pipe(es.wait(function(err, data) {
+                    assert(!err);
+                    header = save.firstChunk;
+                    if (opts.debug) {
+                        var code = data.toString('utf8');
+                        var map = convert.fromSource(code, true).toObject();
+                        var consumer = new SourceMapConsumer(map);
+                        var pos = consumer.generatedPositionFor({ source: 'index.js', line: 1, column: 0 });
+                        var re = /\}\)\(\{$/gm;
+                        assert(re.test(header), 'prelude does not end with newline');
+                        var lineNumStartsWith = 1;
+                        var numNewlineAtEndOfPrelude = 1;
+                        assert(pos.line === newlinesIn(header) + lineNumStartsWith + numNewlineAtEndOfPrelude);
+                    }
+                    done();
+                }));
+            });
+            it('ensure header includes @license tag', function (){
+                var re = new RegExp(' \* @license$', 'gm');
+                assert(re.test(header));
+            });
+            expectedModules.forEach(function (moduleName) {
+                var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
+                it('ensure header includes [' + moduleName + ']', function () {
+                    assert(re.test(header));
+                });
+            });
+            expectedUrls.forEach(function (url) {
+                var re = new RegExp(' \* ' + url + '$', 'gm');
+                it('ensure header includes [' + url + ']', function () {
+                    assert(re.test(header));
+                });
+            });
         });
-    });
+    }
+
+    licensifyTest({debug: true});
+    licensifyTest({debug: false});
 });
 
 
