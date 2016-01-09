@@ -3,7 +3,8 @@
 delete require.cache[require.resolve('../')];
 var licensify = require('../');
 var path = require('path');
-var browserify = require('browserify');
+var requireg = require('requireg');
+var browserify = requireg('browserify');
 var through = require('through2');
 var es = require('event-stream');
 var convert = require('convert-source-map');
@@ -33,6 +34,21 @@ function newlinesIn (src) {
 }
 
 describe('licensify', function () {
+    var positionWithoutLicensify;
+    before(function (done) {
+        var b = browserify([], { debug: true });
+        b.add(path.normalize(path.join(__dirname, '..', 'index.js')));
+        b.bundle().pipe(es.wait(function(err, data) {
+            assert(!err);
+            var code = data.toString('utf8');
+            var map = convert.fromSource(code, true).toObject();
+            var consumer = new SourceMapConsumer(map);
+            // save starting position with debug and without licensify
+            positionWithoutLicensify = consumer.generatedPositionFor({ source: 'index.js', line: 1, column: 0 });
+            done();
+        }));
+    });
+
     var expectedModules = [
         'licensify',
         'base64-js',
@@ -57,7 +73,7 @@ describe('licensify', function () {
         'homepage: https://github.com/beatgammit/base64-js',
         'homepage: https://github.com/feross/buffer',
         'homepage: https://github.com/isaacs/core-util-is#readme',
-        'homepage: https://github.com/Gozala/events',
+        'homepage: https://github.com/Gozala/events#readme',
         'homepage: https://github.com/feross/ieee754#readme',
         'homepage: https://github.com/juliangruber/isarray',
         'homepage: https://github.com/shtylman/node-process#readme',
@@ -89,9 +105,7 @@ describe('licensify', function () {
                         var pos = consumer.generatedPositionFor({ source: 'index.js', line: 1, column: 0 });
                         var re = /\}\)\(\{$/gm;
                         assert(re.test(header), 'prelude does not end with newline');
-                        var lineNumStartsWith = 1;
-                        var numNewlineAtEndOfPrelude = 1;
-                        assert(pos.line === newlinesIn(header) + lineNumStartsWith + numNewlineAtEndOfPrelude);
+                        assert(pos.line === (positionWithoutLicensify.line + newlinesIn(header)));
                     }
                     done();
                 }));
