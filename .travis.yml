@@ -4,10 +4,5 @@ node_js:
   - "0.12"
   - "4.2"
   - "stable"
-before_install:
-  - "npm install -g browserify"
 script:
-  - "npm test"
-  - "npm uninstall -g browserify"
-  - "npm install browserify"
   - "npm test"

@@ -3,8 +3,7 @@
 delete require.cache[require.resolve('../')];
 var licensify = require('../');
 var path = require('path');
-var requireg = require('requireg');
-var browserify = requireg('browserify');
+var browserify = require('browserify');
 var through = require('through2');
 var es = require('event-stream');
 var convert = require('convert-source-map');
@@ -70,7 +69,7 @@ describe('licensify', function () {
     ];
     var expectedUrls = [
         'homepage: https://github.com/twada/licensify',
-        'homepage: https://github.com/beatgammit/base64-js',
+        'homepage: https://github.com/beatgammit/base64-js#readme',
         'homepage: https://github.com/feross/buffer',
         'homepage: https://github.com/isaacs/core-util-is#readme',
         'homepage: https://github.com/Gozala/events#readme',
@@ -103,8 +102,6 @@ describe('licensify', function () {
                         var map = convert.fromSource(code, true).toObject();
                         var consumer = new SourceMapConsumer(map);
                         var pos = consumer.generatedPositionFor({ source: 'index.js', line: 1, column: 0 });
-                        var re = /\}\)\(\{$/gm;
-                        assert(re.test(header), 'prelude does not end with newline');
                         assert(pos.line === (positionWithoutLicensify.line + newlinesIn(header)));
                     }
                     done();
