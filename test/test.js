@@ -32,20 +32,61 @@ function newlinesIn (src) {
     return newlines ? newlines.length : 0;
 }
 
+var expandedPrelude = [
+    '(function outer (modules, cache, entry) {',
+    '    var previousRequire = typeof require == "function" && require;',
+    '    function newRequire(name, jumped){',
+    '        if(!cache[name]) {',
+    '            if(!modules[name]) {',
+    '                var currentRequire = typeof require == "function" && require;',
+    '                if (!jumped && currentRequire) return currentRequire(name, true);',
+    '                if (previousRequire) return previousRequire(name, true);',
+    '                var err = new Error("Cannot find module " + name);',
+    '                err.code = "MODULE_NOT_FOUND";',
+    '                throw err;',
+    '            }',
+    '            var m = cache[name] = {exports:{}};',
+    '            modules[name][0].call(m.exports, function(x){',
+    '                var id = modules[name][1][x];',
+    '                return newRequire(id ? id : x);',
+    '            },m,m.exports,outer,modules,cache,entry);',
+    '        }',
+    '        return cache[name].exports;',
+    '    }',
+    '    for(var i=0;i<entry.length;i++) newRequire(entry[i]);',
+    '    return newRequire;',
+    '})',
+].join('\n');
+
+function consumeMap (opts, callback) {
+    var b = browserify([], opts);
+    b.add(path.normalize(path.join(__dirname, '..', 'index.js')));
+    b.bundle().pipe(es.wait(function(err, data) {
+        assert(!err);
+        var map = convert.fromSource(data.toString('utf8'), true).toObject();
+        var consumer = new SourceMapConsumer(map);
+        callback(consumer);
+    }));
+}
+
+var targetPosition = { source: 'index.js', line: 1, column: 0 };
+
+
 describe('licensify', function () {
-    var positionWithoutLicensify;
+    var defaultPositionWithDebug;
     before(function (done) {
-        var b = browserify([], { debug: true });
-        b.add(path.normalize(path.join(__dirname, '..', 'index.js')));
-        b.bundle().pipe(es.wait(function(err, data) {
-            assert(!err);
-            var code = data.toString('utf8');
-            var map = convert.fromSource(code, true).toObject();
-            var consumer = new SourceMapConsumer(map);
-            // save starting position with debug and without licensify
-            positionWithoutLicensify = consumer.generatedPositionFor({ source: 'index.js', line: 1, column: 0 });
+        consumeMap({ debug: true }, function (consumer) {
+            defaultPositionWithDebug = consumer.generatedPositionFor(targetPosition);
             done();
-        }));
+        });
+    });
+    var defaultPositionWithDebugAndCustomPrelure;
+    before(function (done) {
+        consumeMap({ debug: true, prelude: expandedPrelude }, function (consumer) {
+            defaultPositionWithDebugAndCustomPrelure = consumer.generatedPositionFor(targetPosition);
+            assert(defaultPositionWithDebugAndCustomPrelure.line !== defaultPositionWithDebug.line);
+            done();
+        });
     });
 
     var expectedModules = [
@@ -87,7 +128,7 @@ describe('licensify', function () {
     ];
 
     function licensifyTest (opts) {
-        describe('debug: ' + opts.debug, function () {
+        describe('options: ' + JSON.stringify(opts), function () {
             var header;
             before(function (done) {
                 var save = saveFirstChunk();
@@ -98,11 +139,14 @@ describe('licensify', function () {
                     assert(!err);
                     header = save.firstChunk;
                     if (opts.debug) {
-                        var code = data.toString('utf8');
-                        var map = convert.fromSource(code, true).toObject();
+                        var map = convert.fromSource(data.toString('utf8'), true).toObject();
                         var consumer = new SourceMapConsumer(map);
-                        var pos = consumer.generatedPositionFor({ source: 'index.js', line: 1, column: 0 });
-                        assert(pos.line === (positionWithoutLicensify.line + newlinesIn(header)));
+                        var pos = consumer.generatedPositionFor(targetPosition);
+                        if (opts.prelude) {
+                            assert(pos.line === (defaultPositionWithDebugAndCustomPrelure.line + newlinesIn(header)));
+                        } else {
+                            assert(pos.line === (defaultPositionWithDebug.line + newlinesIn(header)));
+                        }
                     }
                     done();
                 }));
@@ -128,6 +172,7 @@ describe('licensify', function () {
 
     licensifyTest({debug: true});
     licensifyTest({debug: false});
+    licensifyTest({debug: true, prelude: expandedPrelude });
 });
 
 
