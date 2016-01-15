@@ -24,53 +24,27 @@ DESCRIPTION
  *   author: Takuto Wada <takuto.wada@gmail.com>
  *   contributors: Okuno Kentaro, Ayumu Sato, Denis Sokolov
  *   homepage: https://github.com/twada/licensify
- *   version: 2.0.0
+ *   version: 2.1.0
  * 
- * base64-js:
+ * convert-source-map:
  *   license: MIT
- *   author: T. Jameson Little <t.jameson.little@gmail.com>
- *   maintainers: beatgammit <t.jameson.little@gmail.com>, feross <feross@feross.org>
- *   homepage: https://github.com/beatgammit/base64-js
- *   version: 0.0.8
- * 
- * buffer:
- *   license: MIT
- *   author: Feross Aboukhadijeh <feross@feross.org>
- *   maintainers: feross <feross@feross.org>
- *   contributors: Romain Beauxis <toots@rastageeks.org>, James Halliday <mail@substack.net>
- *   homepage: https://github.com/feross/buffer
- *   version: 3.4.3
+ *   author: Thorsten Lorenz <thlorenz@gmx.de>
+ *   maintainers: thlorenz <thlorenz@gmx.de>
+ *   homepage: https://github.com/thlorenz/convert-source-map
+ *   version: 1.1.3
  * 
  * core-util-is:
  *   license: MIT
  *   author: Isaac Z. Schlueter <i@izs.me>
- *   homepage: https://github.com/isaacs/core-util-is
- *   version: 1.0.1
- * 
- * events:
- *   author: Irakli Gozalishvili <rfobic@gmail.com>
- *   maintainers: gozala <rfobic@gmail.com>, shtylman <shtylman@gmail.com>
- *   homepage: https://github.com/Gozala/events
+ *   maintainers: isaacs <i@izs.me>
+ *   homepage: https://github.com/isaacs/core-util-is#readme
  *   version: 1.0.2
- * 
- * ieee754:
- *   license: MIT
- *   author: Feross Aboukhadijeh <feross@feross.org>
- *   maintainers: feross <feross@feross.org>
- *   contributors: Romain Beauxis <toots@rastageeks.org>
- *   homepage: https://github.com/feross/ieee754#readme
- *   version: 1.1.6
  * 
  * inherits:
  *   license: ISC
- *   homepage: https://github.com/isaacs/inherits
+ *   maintainers: isaacs <i@izs.me>
+ *   homepage: https://github.com/isaacs/inherits#readme
  *   version: 2.0.1
- * 
- * is-array:
- *   license: MIT
- *   maintainers: retrofox <rdsuarez@gmail.com>
- *   homepage: https://github.com/retrofox/is-array
- *   version: 1.0.1
  * 
  * isarray:
  *   license: MIT
@@ -79,26 +53,36 @@ DESCRIPTION
  *   homepage: https://github.com/juliangruber/isarray
  *   version: 0.0.1
  * 
- * process:
- *   author: Roman Shtylman <shtylman@gmail.com>
- *   maintainers: coolaj86 <coolaj86@gmail.com>, defunctzombie <shtylman@gmail.com>
- *   homepage: https://github.com/defunctzombie/node-process#readme
- *   version: 0.11.1
+ * offset-sourcemap-lines:
+ *   license: MIT
+ *   author: Takuto Wada <takuto.wada@gmail.com>
+ *   maintainers: twada <takuto.wada@gmail.com>
+ *   homepage: https://github.com/twada/offset-sourcemap-lines
+ *   version: 0.1.0
  * 
  * process-nextick-args:
  *   license: MIT
  *   maintainers: cwmma <calvin.metcalf@gmail.com>
  *   homepage: https://github.com/calvinmetcalf/process-nextick-args
- *   version: 1.0.2
+ *   version: 1.0.6
  * 
  * readable-stream:
  *   license: MIT
  *   maintainers: isaacs <isaacs@npmjs.com>, tootallnate <nathan@tootallnate.net>, rvagg <rod@vagg.org>, cwmma <calvin.metcalf@gmail.com>
  *   homepage: https://github.com/nodejs/readable-stream#readme
- *   version: 2.0.2
+ *   version: 2.0.5
+ * 
+ * source-map:
+ *   license: BSD-3-Clause
+ *   author: Nick Fitzgerald <nfitzgerald@mozilla.com>
+ *   maintainers: mozilla-devtools <mozilla-developer-tools@googlegroups.com>, mozilla <dherman@mozilla.com>, nickfitzgerald <fitzgen@gmail.com>
+ *   contributors: Simon Lydell <simon.lydell@gmail.com>, Tobias Koppers <tobias.koppers@googlemail.com>, Stephen Crane <scrane@mozilla.com>, Ryan Seddon <seddon.ryan@gmail.com>, Miles Elam <miles.elam@deem.com>, Mihai Bazon <mihai.bazon@gmail.com>, Michael Ficarra <github.public.email@michael.ficarra.me>, Todd Wolfson <todd@twolfson.com>, Alexander Solovyov <alexander@solovyov.net>, Felix Gnass <fgnass@gmail.com>, Conrad Irwin <conrad.irwin@gmail.com>, usrbincc <usrbincc@yahoo.com>, David Glasser <glasser@davidglasser.net>, Chase Douglas <chase@newrelic.com>, Evan Wallace <evan.exe@gmail.com>, Heather Arthur <fayearthur@gmail.com>, Hugh Kennedy <hughskennedy@gmail.com>, David Glasser <glasser@davidglasser.net>, Duncan Beevers <duncan@dweebd.com>, Jmeas Smith <jellyes2@gmail.com>, Michael Z Goddard <mzgoddard@gmail.com>, azu <azu@users.noreply.github.com>, John Gozde <john@gozde.ca>, Adam Kirkton <akirkton@truefitinnovation.com>, Chris Montgomery <christopher.montgomery@dowjones.com>, J. Ryan Stinnett <jryans@gmail.com>, Jack Herrington <jherrington@walmartlabs.com>, Chris Truter <jeffpalentine@gmail.com>, Daniel Espeset <daniel@danielespeset.com>, Jamie Wong <jamie.lf.wong@gmail.com>, Eddy Bruël <ejpbruel@mozilla.com>, Hawken Rives <hawkrives@gmail.com>, Gilad Peleg <giladp007@gmail.com>, djchie <djchie.dev@gmail.com>, Gary Ye <garysye@gmail.com>, Nicolas Lalevée <nicolas.lalevee@hibnet.org>
+ *   homepage: https://github.com/mozilla/source-map
+ *   version: 0.5.3
  * 
  * string_decoder:
  *   license: MIT
+ *   maintainers: substack <mail@substack.net>, rvagg <rod@vagg.org>
  *   homepage: https://github.com/rvagg/string_decoder
  *   version: 0.10.31
  * 
@@ -115,28 +99,22 @@ DESCRIPTION
  *   maintainers: twada <takuto.wada@gmail.com>
  *   contributors: azu, Yosuke Furukawa
  *   homepage: https://github.com/twada/type-name
- *   version: 1.0.1
- * 
- * util:
- *   license: MIT
- *   author: Joyent
- *   maintainers: shtylman <shtylman@gmail.com>
- *   homepage: https://github.com/defunctzombie/node-util
- *   version: 0.10.3
+ *   version: 2.0.0
  * 
  * util-deprecate:
  *   license: MIT
  *   author: Nathan Rajlich <nathan@tootallnate.net>
  *   maintainers: tootallnate <nathan@tootallnate.net>
  *   homepage: https://github.com/TooTallNate/util-deprecate
- *   version: 1.0.1
+ *   version: 1.0.2
  * 
  * xtend:
- *   licenses: MIT
+ *   license: MIT
  *   author: Raynos <raynos2@gmail.com>
+ *   maintainers: raynos <raynos2@gmail.com>
  *   contributors: Jake Verbaten, Matt Esch
  *   homepage: https://github.com/Raynos/xtend
- *   version: 4.0.0
+ *   version: 4.0.1
  * 
  * This header is generated by licensify (https://github.com/twada/licensify)
  */
