@@ -1,3 +1,11 @@
+## [2.1.0](https://github.com/twada/licensify/releases/tag/v2.1.0) (2016-01-16)
+
+
+#### Features
+
+* [support SourceMap through browserify's `--debug` option](https://github.com/twada/licensify/pull/9)
+
+
 ### [2.0.1](https://github.com/twada/licensify/releases/tag/v2.0.1) (2015-09-13)
 
 
