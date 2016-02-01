@@ -20,60 +20,74 @@ DESCRIPTION
  * @license
  * 
  * licensify:
- *   license: MIT
+ *   license: MIT (http://opensource.org/licenses/MIT)
  *   author: Takuto Wada <takuto.wada@gmail.com>
  *   contributors: Okuno Kentaro, Ayumu Sato, Denis Sokolov
  *   homepage: https://github.com/twada/licensify
- *   version: 2.1.0
+ *   version: 2.2.0
  * 
  * convert-source-map:
- *   license: MIT
+ *   license: MIT (http://opensource.org/licenses/MIT)
  *   author: Thorsten Lorenz <thlorenz@gmx.de>
  *   maintainers: thlorenz <thlorenz@gmx.de>
  *   homepage: https://github.com/thlorenz/convert-source-map
  *   version: 1.1.3
  * 
  * core-util-is:
- *   license: MIT
+ *   license: MIT (http://opensource.org/licenses/MIT)
  *   author: Isaac Z. Schlueter <i@izs.me>
  *   maintainers: isaacs <i@izs.me>
  *   homepage: https://github.com/isaacs/core-util-is#readme
  *   version: 1.0.2
  * 
  * inherits:
- *   license: ISC
+ *   license: ISC (http://opensource.org/licenses/ISC)
  *   maintainers: isaacs <i@izs.me>
  *   homepage: https://github.com/isaacs/inherits#readme
  *   version: 2.0.1
  * 
  * isarray:
- *   license: MIT
+ *   license: MIT (http://opensource.org/licenses/MIT)
  *   author: Julian Gruber <mail@juliangruber.com>
  *   maintainers: juliangruber <julian@juliangruber.com>
  *   homepage: https://github.com/juliangruber/isarray
  *   version: 0.0.1
  * 
  * offset-sourcemap-lines:
- *   license: MIT
+ *   license: MIT (http://opensource.org/licenses/MIT)
  *   author: Takuto Wada <takuto.wada@gmail.com>
  *   maintainers: twada <takuto.wada@gmail.com>
  *   homepage: https://github.com/twada/offset-sourcemap-lines
  *   version: 0.1.0
  * 
+ * osi-licenses:
+ *   license: MIT (http://opensource.org/licenses/MIT)
+ *   author: Meryn Stol <merynstol@gmail.com>
+ *   maintainers: meryn <merynstol@gmail.com>
+ *   homepage: https://github.com/meryn/osi-licenses
+ *   version: 0.1.1
+ * 
+ * oss-license-name-to-url:
+ *   license: MIT (http://opensource.org/licenses/MIT)
+ *   author: Zeke Sikelianos <zeke@sikelianos.com>
+ *   maintainers: zeke <zeke@sikelianos.com>, isaacs <isaacs@npmjs.com>
+ *   homepage: https://github.com/npm/oss-license-name-to-url
+ *   version: 1.2.1
+ * 
  * process-nextick-args:
- *   license: MIT
+ *   license: MIT (http://opensource.org/licenses/MIT)
  *   maintainers: cwmma <calvin.metcalf@gmail.com>
  *   homepage: https://github.com/calvinmetcalf/process-nextick-args
  *   version: 1.0.6
  * 
  * readable-stream:
- *   license: MIT
+ *   license: MIT (http://opensource.org/licenses/MIT)
  *   maintainers: isaacs <isaacs@npmjs.com>, tootallnate <nathan@tootallnate.net>, rvagg <rod@vagg.org>, cwmma <calvin.metcalf@gmail.com>
  *   homepage: https://github.com/nodejs/readable-stream#readme
  *   version: 2.0.5
  * 
  * source-map:
- *   license: BSD-3-Clause
+ *   license: BSD-3-Clause (http://opensource.org/licenses/BSD-3-Clause)
  *   author: Nick Fitzgerald <nfitzgerald@mozilla.com>
  *   maintainers: mozilla-devtools <mozilla-developer-tools@googlegroups.com>, mozilla <dherman@mozilla.com>, nickfitzgerald <fitzgen@gmail.com>
  *   contributors: Simon Lydell <simon.lydell@gmail.com>, Tobias Koppers <tobias.koppers@googlemail.com>, Stephen Crane <scrane@mozilla.com>, Ryan Seddon <seddon.ryan@gmail.com>, Miles Elam <miles.elam@deem.com>, Mihai Bazon <mihai.bazon@gmail.com>, Michael Ficarra <github.public.email@michael.ficarra.me>, Todd Wolfson <todd@twolfson.com>, Alexander Solovyov <alexander@solovyov.net>, Felix Gnass <fgnass@gmail.com>, Conrad Irwin <conrad.irwin@gmail.com>, usrbincc <usrbincc@yahoo.com>, David Glasser <glasser@davidglasser.net>, Chase Douglas <chase@newrelic.com>, Evan Wallace <evan.exe@gmail.com>, Heather Arthur <fayearthur@gmail.com>, Hugh Kennedy <hughskennedy@gmail.com>, David Glasser <glasser@davidglasser.net>, Duncan Beevers <duncan@dweebd.com>, Jmeas Smith <jellyes2@gmail.com>, Michael Z Goddard <mzgoddard@gmail.com>, azu <azu@users.noreply.github.com>, John Gozde <john@gozde.ca>, Adam Kirkton <akirkton@truefitinnovation.com>, Chris Montgomery <christopher.montgomery@dowjones.com>, J. Ryan Stinnett <jryans@gmail.com>, Jack Herrington <jherrington@walmartlabs.com>, Chris Truter <jeffpalentine@gmail.com>, Daniel Espeset <daniel@danielespeset.com>, Jamie Wong <jamie.lf.wong@gmail.com>, Eddy Bruël <ejpbruel@mozilla.com>, Hawken Rives <hawkrives@gmail.com>, Gilad Peleg <giladp007@gmail.com>, djchie <djchie.dev@gmail.com>, Gary Ye <garysye@gmail.com>, Nicolas Lalevée <nicolas.lalevee@hibnet.org>
@@ -81,20 +95,20 @@ DESCRIPTION
  *   version: 0.5.3
  * 
  * string_decoder:
- *   license: MIT
+ *   license: MIT (http://opensource.org/licenses/MIT)
  *   maintainers: substack <mail@substack.net>, rvagg <rod@vagg.org>
  *   homepage: https://github.com/rvagg/string_decoder
  *   version: 0.10.31
  * 
  * through2:
- *   license: MIT
+ *   license: MIT (http://opensource.org/licenses/MIT)
  *   author: Rod Vagg <r@va.gg>
  *   maintainers: rvagg <rod@vagg.org>, bryce <bryce@ravenwall.com>
  *   homepage: https://github.com/rvagg/through2#readme
  *   version: 2.0.0
  * 
  * type-name:
- *   license: MIT
+ *   license: MIT (http://opensource.org/licenses/MIT)
  *   author: Takuto Wada <takuto.wada@gmail.com>
  *   maintainers: twada <takuto.wada@gmail.com>
  *   contributors: azu, Yosuke Furukawa
@@ -102,14 +116,14 @@ DESCRIPTION
  *   version: 2.0.0
  * 
  * util-deprecate:
- *   license: MIT
+ *   license: MIT (http://opensource.org/licenses/MIT)
  *   author: Nathan Rajlich <nathan@tootallnate.net>
  *   maintainers: tootallnate <nathan@tootallnate.net>
  *   homepage: https://github.com/TooTallNate/util-deprecate
  *   version: 1.0.2
  * 
  * xtend:
- *   license: MIT
+ *   license: MIT (http://opensource.org/licenses/MIT)
  *   author: Raynos <raynos2@gmail.com>
  *   maintainers: raynos <raynos2@gmail.com>
  *   contributors: Jake Verbaten, Matt Esch
