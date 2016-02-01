@@ -126,6 +126,11 @@ describe('licensify', function () {
         'homepage: https://github.com/TooTallNate/util-deprecate',
         'homepage: https://github.com/Raynos/xtend'
     ];
+    var expectedLicenseUrls = [
+        'http://opensource.org/licenses/MIT',
+        'http://opensource.org/licenses/ISC',
+        'http://opensource.org/licenses/BSD-3-Clause'
+    ];
 
     function licensifyTest (opts) {
         describe('options: ' + JSON.stringify(opts), function () {
@@ -164,6 +169,12 @@ describe('licensify', function () {
             expectedUrls.forEach(function (url) {
                 var re = new RegExp(' \* ' + url + '$', 'gm');
                 it('ensure header includes [' + url + ']', function () {
+                    assert(re.test(header));
+                });
+            });
+            expectedLicenseUrls.forEach(function (licenseUrl) {
+                var re = new RegExp(licenseUrl, 'gm');
+                it('ensure header includes [' + licenseUrl + ']', function () {
                     assert(re.test(header));
                 });
             });
