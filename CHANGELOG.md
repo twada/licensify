@@ -1,3 +1,11 @@
+## [2.2.0](https://github.com/twada/licensify/releases/tag/v2.2.0) (2016-02-01)
+
+
+#### Features
+
+* [Add opensource.org URL if license name is a valid SPDX expression](https://github.com/twada/licensify/pull/11)
+
+
 ## [2.1.0](https://github.com/twada/licensify/releases/tag/v2.1.0) (2016-01-16)
 
 
