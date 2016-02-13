@@ -1,7 +1,7 @@
 licensify
 ================================
 
-Browserify plugin to prepend license header to your bundle
+[Browserify](http://browserify.org/) plugin to prepend license header to your bundle
 
 [![Build Status][travis-image]][travis-url]
 [![NPM version][npm-image]][npm-url]
@@ -12,7 +12,7 @@ Browserify plugin to prepend license header to your bundle
 DESCRIPTION
 ---------------------------------------
 
-`licensify` is a browserify plugin to prepend license header to your bundle as follows.
+`licensify` is a [Browserify](http://browserify.org/) plugin to prepend license header to your bundle as follows.
 
 ```javascript
 /**
