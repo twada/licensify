@@ -247,3 +247,44 @@ describe('`scanBrowser` option is just ignored since 2.0.0', function () {
         });
     });
 });
+
+
+describe('licensify private', function () {
+    var header;
+
+    before(function (done) {
+        var save = saveFirstChunk();
+        var b = browserify();
+        b.add(path.normalize(path.join(__dirname, 'test-private-package', 'index.js')));
+        b.plugin(licensify);
+        b.bundle().pipe(save).pipe(es.wait(function(err, data) {
+            assert(!err);
+            header = save.firstChunk;
+            done();
+        }));
+    });
+
+    var expectedModules = [
+        'jquery',
+        'angular'
+    ];
+    expectedModules.forEach(function (moduleName) {
+        var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
+        it('ensure header includes [' + moduleName + ']', function () {
+            assert(re.test(header));
+        });
+    });
+
+    var expectedPrivateModules = [
+        'licensity-test-private-package',
+        'private-dummy'
+    ];
+    expectedPrivateModules.forEach(function (moduleName) {
+        var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
+        it('ensure header non includes [' + moduleName + ']', function () {
+            assert(!re.test(header));
+        });
+    });
+});
+
+

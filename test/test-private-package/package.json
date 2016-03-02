@@ -1,0 +1,17 @@
+{
+  "name": "licensify-test-private-package",
+  "description": "",
+  "version": "0.0.1",
+  "author": {
+    "name": "yudppp"
+  },
+  "browser": {
+    "jquery": "./node_modules/jquery/dummy.js",
+    "angular": "./node_modules/angular/dummy.js",
+    "private-dummy": "./node_modules/private-dummy/dummy.js"
+  },
+  "private": true,
+  "license": {
+    "type": "MIT"
+  }
+}
