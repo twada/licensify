@@ -249,7 +249,7 @@ describe('`scanBrowser` option is just ignored since 2.0.0', function () {
 });
 
 
-describe('licensify private', function () {
+describe('igore private packages', function () {
     var header;
 
     before(function (done) {
@@ -281,10 +281,8 @@ describe('licensify private', function () {
     ];
     expectedPrivateModules.forEach(function (moduleName) {
         var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
-        it('ensure header non includes [' + moduleName + ']', function () {
+        it('ensure header does not include [' + moduleName + ']', function () {
             assert(!re.test(header));
         });
     });
 });
-
-
