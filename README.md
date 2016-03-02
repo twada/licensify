@@ -22,16 +22,16 @@ DESCRIPTION
  * licensify:
  *   license: MIT (http://opensource.org/licenses/MIT)
  *   author: Takuto Wada <takuto.wada@gmail.com>
- *   contributors: Okuno Kentaro, Ayumu Sato, Denis Sokolov
+ *   contributors: Okuno Kentaro, Ayumu Sato, Denis Sokolov, yudppp
  *   homepage: https://github.com/twada/licensify
- *   version: 2.2.0
+ *   version: 3.0.0
  * 
  * convert-source-map:
  *   license: MIT (http://opensource.org/licenses/MIT)
  *   author: Thorsten Lorenz <thlorenz@gmx.de>
  *   maintainers: thlorenz <thlorenz@gmx.de>
  *   homepage: https://github.com/thlorenz/convert-source-map
- *   version: 1.1.3
+ *   version: 1.2.0
  * 
  * core-util-is:
  *   license: MIT (http://opensource.org/licenses/MIT)
@@ -105,7 +105,7 @@ DESCRIPTION
  *   author: Rod Vagg <r@va.gg>
  *   maintainers: rvagg <rod@vagg.org>, bryce <bryce@ravenwall.com>
  *   homepage: https://github.com/rvagg/through2#readme
- *   version: 2.0.0
+ *   version: 2.0.1
  * 
  * type-name:
  *   license: MIT (http://opensource.org/licenses/MIT)
