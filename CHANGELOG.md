@@ -1,3 +1,34 @@
+## [3.0.0](https://github.com/twada/licensify/releases/tag/v3.0.0) (2016-03-04)
+
+
+#### Features
+
+* [Ignore private package](https://github.com/twada/licensify/pull/12) (by [@yudppp](https://github.com/yudppp))
+
+
+#### Breaking Changes
+
+Since 3.0.0, licensify ignores packages which are [marked as private in package.json](https://docs.npmjs.com/files/package.json#private) by default. To include private packages as before, please use `includePrivate` option. When `includePrivate` option is truthy, licensify includes private packages.
+
+CLI usage:
+
+```
+$ $(npm bin)/browserify path/to/your/file.js -p [ licensify --includePrivate ] > build/bundle.js 
+```
+
+API usage:
+
+```javascript
+var browserify = require('browserify');
+var licensify = require('licensify');
+
+var b = browserify();
+b.add('/path/to/your/file');
+b.plugin(licensify, { includePrivate: true });
+b.bundle().pipe(dest)
+```
+
+
 ## [2.2.0](https://github.com/twada/licensify/releases/tag/v2.2.0) (2016-02-01)
 
 
