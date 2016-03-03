@@ -166,7 +166,29 @@ Since 2.0.0, licensify scans and traverses [`browser` field](https://github.com/
 
 ### private field
 
-Since 3.0.0, licensify ignores modules which are [marked as private in package.json](https://docs.npmjs.com/files/package.json#private).
+Since 3.0.0, licensify ignores modules which are [marked as private in package.json](https://docs.npmjs.com/files/package.json#private) by default.
+
+#### includePrivate option
+
+if `includePrivate` option is truthy, licensify includes private packages too.
+
+by command-line
+
+```
+$ $(npm bin)/browserify path/to/your/file.js -p [ licensify --includePrivate ] > build/bundle.js 
+```
+
+or programmatically
+
+```javascript
+var browserify = require('browserify');
+var licensify = require('licensify');
+
+var b = browserify();
+b.add('/path/to/your/file');
+b.plugin(licensify, { includePrivate: true });
+b.bundle().pipe(dest)
+```
 
 
 INSTALL
