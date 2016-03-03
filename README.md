@@ -166,7 +166,7 @@ Since 2.0.0, licensify scans and traverses [`browser` field](https://github.com/
 
 ### private field
 
-Since 3.0.0, licensify ignores modules which are [marked as private in package.json](https://docs.npmjs.com/files/package.json#private) by default.
+Since 3.0.0, licensify ignores packages which are [marked as private in package.json](https://docs.npmjs.com/files/package.json#private) by default.
 
 #### includePrivate option
 

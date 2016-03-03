@@ -259,7 +259,7 @@ describe('private packages', function () {
         'private-dummy'
     ];
 
-    describe('igore private packages by default', function () {
+    describe('ignore private packages by default', function () {
         var header;
         before(function (done) {
             var save = saveFirstChunk();
@@ -286,7 +286,7 @@ describe('private packages', function () {
         });
     });
 
-    describe('include private packages if includePrivate is truthy', function () {
+    describe('include private packages if `includePrivate` option is truthy', function () {
         var header;
         before(function (done) {
             var save = saveFirstChunk();
