@@ -249,40 +249,67 @@ describe('`scanBrowser` option is just ignored since 2.0.0', function () {
 });
 
 
-describe('igore private packages', function () {
-    var header;
-
-    before(function (done) {
-        var save = saveFirstChunk();
-        var b = browserify();
-        b.add(path.normalize(path.join(__dirname, 'test-private-package', 'index.js')));
-        b.plugin(licensify);
-        b.bundle().pipe(save).pipe(es.wait(function(err, data) {
-            assert(!err);
-            header = save.firstChunk;
-            done();
-        }));
-    });
-
+describe('private packages', function () {
     var expectedModules = [
         'jquery',
         'angular'
     ];
-    expectedModules.forEach(function (moduleName) {
-        var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
-        it('ensure header includes [' + moduleName + ']', function () {
-            assert(re.test(header));
+    var privateModules = [
+        'licensify-test-private-package',
+        'private-dummy'
+    ];
+
+    describe('igore private packages by default', function () {
+        var header;
+        before(function (done) {
+            var save = saveFirstChunk();
+            var b = browserify();
+            b.add(path.normalize(path.join(__dirname, 'test-private-package', 'index.js')));
+            b.plugin(licensify);
+            b.bundle().pipe(save).pipe(es.wait(function(err, data) {
+                assert(!err);
+                header = save.firstChunk;
+                done();
+            }));
+        });
+        expectedModules.forEach(function (moduleName) {
+            var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
+            it('ensure header includes [' + moduleName + ']', function () {
+                assert(re.test(header));
+            });
+        });
+        privateModules.forEach(function (moduleName) {
+            var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
+            it('ensure header does NOT include [' + moduleName + ']', function () {
+                assert(!re.test(header));
+            });
         });
     });
 
-    var expectedPrivateModules = [
-        'licensity-test-private-package',
-        'private-dummy'
-    ];
-    expectedPrivateModules.forEach(function (moduleName) {
-        var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
-        it('ensure header does not include [' + moduleName + ']', function () {
-            assert(!re.test(header));
+    describe('include private packages if includePrivate is truthy', function () {
+        var header;
+        before(function (done) {
+            var save = saveFirstChunk();
+            var b = browserify();
+            b.add(path.normalize(path.join(__dirname, 'test-private-package', 'index.js')));
+            b.plugin(licensify, {includePrivate: true});
+            b.bundle().pipe(save).pipe(es.wait(function(err, data) {
+                assert(!err);
+                header = save.firstChunk;
+                done();
+            }));
+        });
+        expectedModules.forEach(function (moduleName) {
+            var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
+            it('ensure header includes [' + moduleName + ']', function () {
+                assert(re.test(header));
+            });
+        });
+        privateModules.forEach(function (moduleName) {
+            var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
+            it('ensure header includes [' + moduleName + ']', function () {
+                assert(re.test(header));
+            });
         });
     });
 });
