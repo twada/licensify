@@ -3,7 +3,8 @@
 
 #### Features
 
-* [Ignore private package](https://github.com/twada/licensify/pull/12) (by [@yudppp](https://github.com/yudppp))
+* [Ignore private packages by default](https://github.com/twada/licensify/pull/12) (by [@yudppp](https://github.com/yudppp))
+* [`includePrivate` option to include private packages](https://github.com/twada/licensify/pull/13)
 
 
 #### Breaking Changes
