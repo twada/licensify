@@ -24,7 +24,7 @@ DESCRIPTION
  *   author: Takuto Wada <takuto.wada@gmail.com>
  *   contributors: Okuno Kentaro, Ayumu Sato, Denis Sokolov, yudppp
  *   homepage: https://github.com/twada/licensify
- *   version: 3.0.0
+ *   version: 3.0.1
  * 
  * convert-source-map:
  *   license: MIT (http://opensource.org/licenses/MIT)

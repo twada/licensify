@@ -1,3 +1,11 @@
+### [3.0.1](https://github.com/twada/licensify/releases/tag/v3.0.1) (2016-03-10)
+
+
+#### Bug Fixes
+
+* [dealing with `licences` field without `type` field](https://github.com/twada/licensify/pull/14)
+
+
 ## [3.0.0](https://github.com/twada/licensify/releases/tag/v3.0.0) (2016-03-04)
 
 
