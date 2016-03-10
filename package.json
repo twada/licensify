@@ -1,7 +1,7 @@
 {
   "name": "licensify",
   "description": "Browserify plugin to prepend license header to your bundle",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "author": {
     "name": "Takuto Wada",
     "email": "takuto.wada@gmail.com",
