@@ -1,0 +1,11 @@
+{
+  "name": "test-typeless-package",
+  "description": "",
+  "version": "0.0.1",
+  "licenses": [
+    {
+      "license": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ]
+}

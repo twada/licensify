@@ -313,3 +313,31 @@ describe('private packages', function () {
         });
     });
 });
+
+
+describe('type-less licenses', function () {
+    var expectedModules = [
+        'test-typeless-package'
+    ];
+
+    describe('should also be in output', function () {
+        var header;
+        before(function (done) {
+            var save = saveFirstChunk();
+            var b = browserify();
+            b.add(path.normalize(path.join(__dirname, 'test-typeless-package', 'index.js')));
+            b.plugin(licensify);
+            b.bundle().pipe(save).pipe(es.wait(function(err, data) {
+                assert(!err);
+                header = save.firstChunk;
+                done();
+            }));
+        });
+        expectedModules.forEach(function (moduleName) {
+            var re = new RegExp(' \* ' + moduleName + '\:$', 'gm');
+            it('ensure header includes [' + moduleName + ']', function () {
+                assert(re.test(header));
+            });
+        });
+    });
+});
