@@ -1,0 +1,10 @@
+{
+  "name": "test-multiple-common-licenses",
+  "description": "",
+  "version": "0.0.1",
+  "dependencies": {
+    "test-conjunctive-and-operator": "./node_modules/test-conjunctive-and-operator",
+    "test-disjunctive-or-operator": "./node_modules/test-disjunctive-or-operator"
+  },
+  "license": "MIT"
+}
