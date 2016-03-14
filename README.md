@@ -22,9 +22,9 @@ DESCRIPTION
  * licensify:
  *   license: MIT (http://opensource.org/licenses/MIT)
  *   author: Takuto Wada <takuto.wada@gmail.com>
- *   contributors: Okuno Kentaro, Ayumu Sato, Denis Sokolov, yudppp
+ *   contributors: Okuno Kentaro, Ayumu Sato, Denis Sokolov, yudppp, Daijiro Wachi
  *   homepage: https://github.com/twada/licensify
- *   version: 3.0.1
+ *   version: 3.1.0
  * 
  * convert-source-map:
  *   license: MIT (http://opensource.org/licenses/MIT)
@@ -51,7 +51,7 @@ DESCRIPTION
  *   author: Julian Gruber <mail@juliangruber.com>
  *   maintainers: juliangruber <julian@juliangruber.com>
  *   homepage: https://github.com/juliangruber/isarray
- *   version: 0.0.1
+ *   version: 1.0.0
  * 
  * offset-sourcemap-lines:
  *   license: MIT (http://opensource.org/licenses/MIT)
@@ -84,7 +84,7 @@ DESCRIPTION
  *   license: MIT (http://opensource.org/licenses/MIT)
  *   maintainers: isaacs <isaacs@npmjs.com>, tootallnate <nathan@tootallnate.net>, rvagg <rod@vagg.org>, cwmma <calvin.metcalf@gmail.com>
  *   homepage: https://github.com/nodejs/readable-stream#readme
- *   version: 2.0.5
+ *   version: 2.0.6
  * 
  * source-map:
  *   license: BSD-3-Clause (http://opensource.org/licenses/BSD-3-Clause)

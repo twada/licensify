@@ -1,3 +1,11 @@
+## [3.1.0](https://github.com/twada/licensify/releases/tag/v3.1.0) (2016-03-14)
+
+
+#### Features
+
+* [Support two operators (AND/OR) in SPDX license expression as multiple common licenses](https://github.com/twada/licensify/pull/16) (by [@watilde](https://github.com/watilde))
+
+
 ### [3.0.1](https://github.com/twada/licensify/releases/tag/v3.0.1) (2016-03-10)
 
 
