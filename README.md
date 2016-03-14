@@ -210,6 +210,7 @@ CONTRIBUTORS
 * [Ayumu Sato](https://github.com/ahomu)
 * [Denis Sokolov](https://github.com/denis-sokolov)
 * [yudppp](https://github.com/yudppp)
+* [Daijiro Wachi](https://github.com/watilde)
 
 
 LICENSE

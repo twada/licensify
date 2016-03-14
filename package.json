@@ -24,6 +24,10 @@
     {
       "name": "yudppp",
       "url": "https://github.com/yudppp"
+    },
+    {
+      "name": "Daijiro Wachi",
+      "url": "https://github.com/watilde"
     }
   ],
   "dependencies": {
