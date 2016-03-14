@@ -342,14 +342,16 @@ describe('type-less licenses', function () {
     });
 });
 
+
 describe('multiple common licenses', function () {
     var expectedModules = [
         'test-conjunctive-and-operator',
         'test-disjunctive-or-operator'
     ];
-    var expectedOperators = [
-        'OR', 'AND'
-    ]
+    var expectedLicences = [
+        'LGPL-2.1 \\(http://opensource.org/licenses/LGPL-2.1\\) AND MIT \\(http://opensource.org/licenses/MIT\\)',
+        'LGPL-2.1 \\(http://opensource.org/licenses/LGPL-2.1\\) OR MIT \\(http://opensource.org/licenses/MIT\\)'
+    ];
 
     describe('should also be in output', function () {
         var header;
@@ -370,9 +372,9 @@ describe('multiple common licenses', function () {
                 assert(re.test(header));
             });
         });
-        expectedOperators.forEach(function (operators) {
-            var re = new RegExp(operators, 'gm');
-            it('ensure header includes [' + operators + ']', function () {
+        expectedLicences.forEach(function (licenses) {
+            var re = new RegExp(licenses, 'gm');
+            it('ensure header includes [' + licenses + ']', function () {
                 assert(re.test(header));
             });
         });
