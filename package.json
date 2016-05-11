@@ -38,6 +38,8 @@
     "type-name": "^2.0.0"
   },
   "devDependencies": {
+    "babel-plugin-transform-es2015-classes": "^6.8.0",
+    "babelify": "^7.3.0",
     "browserify": "^13.0.0",
     "event-stream": "^3.3.1",
     "intelli-espower-loader": "^1.0.0",
