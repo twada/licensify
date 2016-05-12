@@ -32,12 +32,14 @@
   ],
   "dependencies": {
     "convert-source-map": "^1.1.3",
-    "offset-sourcemap-lines": "^0.1.0",
+    "offset-sourcemap-lines": "^0.1.1",
     "oss-license-name-to-url": "^1.2.1",
     "through2": "^2.0.0",
     "type-name": "^2.0.0"
   },
   "devDependencies": {
+    "babel-plugin-transform-es2015-classes": "^6.8.0",
+    "babelify": "^7.3.0",
     "browserify": "^13.0.0",
     "event-stream": "^3.3.1",
     "intelli-espower-loader": "^1.0.0",
