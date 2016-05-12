@@ -1,4 +1,4 @@
-### [3.1.1](https://github.com/twada/licensify/releases/tag/3.1.1) (2016-05-12)
+### [3.1.1](https://github.com/twada/licensify/releases/tag/v3.1.1) (2016-05-12)
 
 
 #### Bug Fixes
