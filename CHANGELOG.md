@@ -1,3 +1,11 @@
+### [3.1.1](https://github.com/twada/licensify/releases/tag/3.1.1) (2016-05-12)
+
+
+#### Bug Fixes
+
+* [Fix invalid SourceMap mapping error when using babelify](https://github.com/twada/licensify/pull/18)
+
+
 ## [3.1.0](https://github.com/twada/licensify/releases/tag/v3.1.0) (2016-03-14)
 
 
