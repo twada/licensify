@@ -69,6 +69,6 @@
     "url": "https://github.com/twada/licensify.git"
   },
   "scripts": {
-    "test": "mocha --require intelli-espower-loader"
+    "test": "mocha --timeout 0 --require intelli-espower-loader"
   }
 }
