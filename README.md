@@ -211,6 +211,7 @@ CONTRIBUTORS
 * [Denis Sokolov](https://github.com/denis-sokolov)
 * [yudppp](https://github.com/yudppp)
 * [Daijiro Wachi](https://github.com/watilde)
+* [Adam Prescott](https://github.com/aprescott)
 
 
 LICENSE
