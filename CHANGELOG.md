@@ -1,3 +1,11 @@
+### [3.1.2](https://github.com/twada/licensify/releases/tag/v3.1.2) (2016-05-31)
+
+
+#### Bug Fixes
+
+* [Avoid trailing spaces on lines containing only an asterisk](https://github.com/twada/licensify/pull/19) (by [@aprescott](https://github.com/aprescott))
+
+
 ### [3.1.1](https://github.com/twada/licensify/releases/tag/v3.1.1) (2016-05-12)
 
 
