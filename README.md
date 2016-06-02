@@ -216,7 +216,7 @@ CONTRIBUTORS
 
 LICENSE
 ---------------------------------------
-Licensed under the [MIT](http://twada.mit-license.org/2014-2016) license.
+Licensed under the [MIT](https://twada.mit-license.org/2014-2016) license.
 
 
 [npm-url]: https://www.npmjs.com/package/licensify
@@ -228,5 +228,5 @@ Licensed under the [MIT](http://twada.mit-license.org/2014-2016) license.
 [depstat-url]: https://gemnasium.com/twada/licensify
 [depstat-image]: https://gemnasium.com/twada/licensify.svg
 
-[license-url]: http://twada.mit-license.org/2014-2016
+[license-url]: https://twada.mit-license.org/2014-2016
 [license-image]: https://img.shields.io/badge/license-MIT-brightgreen.svg
