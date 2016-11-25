@@ -110,7 +110,7 @@ describe('licensify', function () {
     ];
     var expectedUrls = [
         'homepage: https://github.com/twada/licensify',
-        'homepage: https://github.com/beatgammit/base64-js#readme',
+        'homepage: https://github.com/beatgammit/base64-js',
         'homepage: https://github.com/feross/buffer',
         'homepage: https://github.com/isaacs/core-util-is#readme',
         'homepage: https://github.com/Gozala/events#readme',
