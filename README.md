@@ -214,6 +214,14 @@ CONTRIBUTORS
 * [Adam Prescott](https://github.com/aprescott)
 
 
+SUPPORT POLICY
+---------------------------------------
+
+[Node under maintenance](https://github.com/nodejs/LTS) is supported.
+
+NOTE: If licensify works in any of the unsupported environments, it is purely coincidental and has no bearing on future compatibility. Use at your own risk.
+
+
 LICENSE
 ---------------------------------------
 Licensed under the [MIT](https://twada.mit-license.org/2014-2016) license.
