@@ -116,7 +116,6 @@ describe('licensify', function () {
         'homepage: https://github.com/Gozala/events#readme',
         'homepage: https://github.com/feross/ieee754#readme',
         'homepage: https://github.com/juliangruber/isarray',
-        'homepage: https://github.com/shtylman/node-process#readme',
         'homepage: https://github.com/calvinmetcalf/process-nextick-args',
         'homepage: https://github.com/nodejs/readable-stream#readme',
         'homepage: https://github.com/rvagg/string_decoder',
