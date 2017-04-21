@@ -1,3 +1,11 @@
+### [3.1.3](https://github.com/twada/licensify/releases/tag/v3.1.3) (2017-04-21)
+
+
+#### Bug Fixes
+
+* [Ignore invalid pkg](https://github.com/twada/licensify/pull/20) (by [@pocotan001](https://github.com/pocotan001))
+
+
 ### [3.1.2](https://github.com/twada/licensify/releases/tag/v3.1.2) (2016-05-31)
 
 
