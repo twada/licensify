@@ -212,6 +212,7 @@ CONTRIBUTORS
 * [yudppp](https://github.com/yudppp)
 * [Daijiro Wachi](https://github.com/watilde)
 * [Adam Prescott](https://github.com/aprescott)
+* [Hayato Mizuno](https://github.com/pocotan001)
 
 
 SUPPORT POLICY
